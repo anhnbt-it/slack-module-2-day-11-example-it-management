@@ -1,6 +1,5 @@
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.Comparator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -8,8 +7,8 @@ import java.util.Scanner;
  * Date: 10/19/2020
  * Time: 5:11 PM
  */
-public class ITManagement {
-    ArrayList<Employee> employees;
+public class ITManagement implements Comparator<Employee> {
+    private ArrayList<Employee> employees;
     public ITManagement() {
         this.employees = new ArrayList<>();
     }
@@ -19,8 +18,28 @@ public class ITManagement {
     }
 
     public void show() {
-        for (Employee e : employees) {
-            System.out.println(e.toString());
+        System.out.println("=================================");
+        System.out.println("\t\tDANH SÁCH NHÂN VIÊN");
+        System.out.println("=================================");
+        if (employees.size() > 0) {
+            for (Employee e : employees) {
+                System.out.println(e.toString());
+            }
+        } else {
+            System.out.println("Danh sanh trong!");
         }
+    }
+
+    public Employee get(int id) {
+        return employees.get(id);
+    }
+
+    public double getPayroll(double basic, double bonus, double penalty) {
+        return basic + bonus - penalty;
+    }
+
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return (o1.getSalary() > o2.getSalary()) ? -1 : 1;
     }
 }
