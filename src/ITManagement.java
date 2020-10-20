@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Time: 5:11 PM
  */
 public class ITManagement {
-    private List<Employee> employees;
+    ArrayList<Employee> employees;
     public ITManagement() {
         this.employees = new ArrayList<>();
     }

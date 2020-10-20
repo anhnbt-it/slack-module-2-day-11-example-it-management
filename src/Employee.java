@@ -11,43 +11,42 @@ public class Employee {
     private int age;
     public static int counter = 1;
 
-
-    private double luongCung;
-    private double luongThuong;
-    private double luongPhat;
-    private double luongThucLinh;
-
-    public double getLuongCung() {
-        return luongCung;
+    public double getBasic() {
+        return basic;
     }
 
-    public void setLuongCung(double luongCung) {
-        this.luongCung = luongCung;
+    public void setBasic(double basic) {
+        this.basic = basic;
     }
 
-    public double getLuongThuong() {
-        return luongThuong;
+    public double getBonus() {
+        return bonus;
     }
 
-    public void setLuongThuong(double luongThuong) {
-        this.luongThuong = luongThuong;
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
     }
 
-    public double getLuongPhat() {
-        return luongPhat;
+    public double getPenalty() {
+        return penalty;
     }
 
-    public void setLuongPhat(double luongPhat) {
-        this.luongPhat = luongPhat;
+    public void setPenalty(double penalty) {
+        this.penalty = penalty;
     }
 
-    public double getLuongThucLinh() {
-        return luongThucLinh;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setLuongThucLinh(double luongThucLinh) {
-        this.luongThucLinh = luongThucLinh;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
+
+    private double basic; // Lương cơ bản
+    private double bonus; // Tiền thưởng
+    private double penalty; // Tiền phạt
+    private double salary; // Lương thực lĩnh
 
     public Employee() {
         this.id = Employee.counter;
@@ -55,7 +54,6 @@ public class Employee {
     }
 
     public Employee(String name, String address, int age) {
-        this.luongCung = 5000000;
         this.id = Employee.counter;
         this.name = name;
         this.address = address;
