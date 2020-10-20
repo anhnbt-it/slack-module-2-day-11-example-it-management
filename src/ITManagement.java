@@ -30,6 +30,11 @@ public class ITManagement implements Comparator<Employee> {
         }
     }
 
+    public boolean remove() {
+        System.out.println("Ban muon xoa nhan vien nay? [y/N]");
+        return true;
+    }
+
     public Employee get(int id) {
         return employees.get(id);
     }
